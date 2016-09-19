@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InClass02b" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-zx-5zE">
+                                <rect key="frame" x="234" y="47" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Second Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqF-Vb-lrb">
+                                <rect key="frame" x="234" y="120" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result: 0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-rc-24y">
+                                <rect key="frame" x="234" y="183" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rkL-LY-nvo">
+                                <rect key="frame" x="178" y="235" width="267" height="29"/>
+                                <segments>
+                                    <segment title="Add"/>
+                                    <segment title="Subtract"/>
+                                    <segment title="Multiply"/>
+                                    <segment title="Divide"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="I4m-DZ-dMr"/>
+                                    <action selector="segmentOp:" destination="BYZ-38-t0r" eventType="valueChanged" id="RRb-sf-ugB"/>
+                                    <action selector="selectedSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="D2Y-wa-WEH"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKB-BS-Mes">
+                                <rect key="frame" x="257" y="342" width="127" height="30"/>
+                                <state key="normal" title="Perform Operation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zFW-xm-NjG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdQ-YG-Sw6">
+                                <rect key="frame" x="222" y="293" width="117" height="30"/>
+                                <state key="normal" title="Clear All">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearFields:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hs7-Q0-nsr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QYH-zx-5zE" secondAttribute="trailing" constant="10" id="41k-hr-YVl"/>
+                            <constraint firstItem="ZKB-BS-Mes" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="7yc-vh-fp4"/>
+                            <constraint firstItem="MqF-Vb-lrb" firstAttribute="top" secondItem="QYH-zx-5zE" secondAttribute="bottom" constant="10" id="9ub-ta-lRN"/>
+                            <constraint firstAttribute="trailing" secondItem="kdQ-YG-Sw6" secondAttribute="trailing" constant="10" id="AvS-iR-mfG"/>
+                            <constraint firstItem="QYH-zx-5zE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="CLA-XM-6DG"/>
+                            <constraint firstAttribute="centerX" secondItem="rkL-LY-nvo" secondAttribute="centerX" id="Gih-AK-gmH"/>
+                            <constraint firstAttribute="trailing" secondItem="MqF-Vb-lrb" secondAttribute="trailing" constant="10" id="HNd-0d-Qrz"/>
+                            <constraint firstItem="MqF-Vb-lrb" firstAttribute="top" secondItem="QYH-zx-5zE" secondAttribute="bottom" constant="10" id="Qaf-tP-bJp"/>
+                            <constraint firstItem="rkL-LY-nvo" firstAttribute="top" secondItem="Uvu-rc-24y" secondAttribute="bottom" constant="20" id="Sx7-p7-oD4"/>
+                            <constraint firstAttribute="centerX" secondItem="Uvu-rc-24y" secondAttribute="centerX" id="a4K-F7-1yC"/>
+                            <constraint firstAttribute="trailing" secondItem="rkL-LY-nvo" secondAttribute="trailing" constant="10" id="eIH-Zs-W7z"/>
+                            <constraint firstItem="MqF-Vb-lrb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="hkH-cK-ws6"/>
+                            <constraint firstItem="kdQ-YG-Sw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="l46-Yq-kmv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZKB-BS-Mes" secondAttribute="trailing" constant="10" id="lSZ-2k-7lS"/>
+                            <constraint firstItem="QYH-zx-5zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="lyJ-Mv-Nly"/>
+                            <constraint firstAttribute="centerX" secondItem="MqF-Vb-lrb" secondAttribute="centerX" id="oIu-Xf-qbe"/>
+                            <constraint firstItem="Uvu-rc-24y" firstAttribute="top" secondItem="MqF-Vb-lrb" secondAttribute="bottom" constant="20" id="pgz-Xo-sZM"/>
+                            <constraint firstAttribute="centerX" secondItem="QYH-zx-5zE" secondAttribute="centerX" id="phT-HJ-aXT"/>
+                            <constraint firstAttribute="centerX" secondItem="ZKB-BS-Mes" secondAttribute="centerX" id="qiS-xr-L4M"/>
+                            <constraint firstAttribute="centerX" secondItem="kdQ-YG-Sw6" secondAttribute="centerX" id="sfC-jw-iLw"/>
+                            <constraint firstAttribute="centerX" secondItem="QYH-zx-5zE" secondAttribute="centerX" id="u2f-Uc-ewC"/>
+                            <constraint firstItem="kdQ-YG-Sw6" firstAttribute="top" secondItem="rkL-LY-nvo" secondAttribute="bottom" constant="20" id="uy9-7w-FhS"/>
+                            <constraint firstItem="rkL-LY-nvo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="xPj-Xw-Fm7"/>
+                            <constraint firstAttribute="trailing" secondItem="MqF-Vb-lrb" secondAttribute="trailing" constant="10" id="xZp-Rf-5VS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstNumber" destination="QYH-zx-5zE" id="s47-6y-4tk"/>
+                        <outlet property="resultValue" destination="Uvu-rc-24y" id="Q58-tL-m88"/>
+                        <outlet property="secondNumber" destination="MqF-Vb-lrb" id="UDv-R1-L0I"/>
+                        <outlet property="segmentVall" destination="rkL-LY-nvo" id="SEi-v3-qtv"/>
+                        <outlet property="segmentedControl" destination="rkL-LY-nvo" id="T0K-tE-XbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
